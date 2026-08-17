@@ -1,0 +1,79 @@
+{
+  "context": {
+    "projectPath": "C:/Users/MTA-403/Desktop/DMT321_Lab01_Unity6.5/Packages",
+    "unityVersion": "6000.5.3f1"
+  },
+  "inputs": [
+    "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Packages\\manifest.json",
+    "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Packages\\packages-lock.json",
+    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.5.3f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
+  ],
+  "outputs": {
+    "com.unity.modules.imageconversion@1.0.0": {
+      "name": "com.unity.modules.imageconversion",
+      "displayName": "Image Conversion",
+      "resolvedPath": "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Library\\PackageCache\\com.unity.modules.imageconversion",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.ugui@2.5.0": {
+      "name": "com.unity.ugui",
+      "displayName": "uGUI",
+      "resolvedPath": "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Library\\PackageCache\\com.unity.ugui@377fd60ad87b",
+      "fingerprint": "377fd60ad87b9a0d0f937feebad7af38b4d4068b",
+      "editorCompatibility": "6000.5.0a1",
+      "version": "2.5.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.ui@1.0.0": {
+      "name": "com.unity.modules.ui",
+      "displayName": "UI",
+      "resolvedPath": "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Library\\PackageCache\\com.unity.modules.ui",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.imgui@1.0.0": {
+      "name": "com.unity.modules.imgui",
+      "displayName": "IMGUI",
+      "resolvedPath": "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Library\\PackageCache\\com.unity.modules.imgui",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.audio@1.0.0": {
+      "name": "com.unity.modules.audio",
+      "displayName": "Audio",
+      "resolvedPath": "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Library\\PackageCache\\com.unity.modules.audio",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.physics2d@1.0.0": {
+      "name": "com.unity.modules.physics2d",
+      "displayName": "Physics 2D",
+      "resolvedPath": "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Library\\PackageCache\\com.unity.modules.physics2d",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.physics@1.0.0": {
+      "name": "com.unity.modules.physics",
+      "displayName": "Physics",
+      "resolvedPath": "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Library\\PackageCache\\com.unity.modules.physics",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.physicscore2d@1.0.0": {
+      "name": "com.unity.modules.physicscore2d",
+      "displayName": "Physics Core 2D",
+      "resolvedPath": "C:\\Users\\MTA-403\\Desktop\\DMT321_Lab01_Unity6.5\\Library\\PackageCache\\com.unity.modules.physicscore2d",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    }
+  }
+}

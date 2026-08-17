@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/DMT321/SimpleDigitalTwin/Scenes/L01_StartHere.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
