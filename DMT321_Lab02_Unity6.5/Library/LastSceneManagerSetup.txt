@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/DMT321/JsonDataTwin/Scenes/L02_JSONDataQualityTwin.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
