@@ -688,7 +688,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.93, g: 0.29, b: 0.14, a: 1}
+  m_BackGroundColor: {r: 0.5415094, g: 1, b: 0.9851788, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -737,13 +737,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525563001}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1491898, y: 0.07249079, z: -0.010967479, w: 0.98608685}
-  m_LocalPosition: {x: 0, y: 4.8, z: -11.5}
+  m_LocalRotation: {x: 0.14948256, y: 0.1070115, z: -0.005731196, w: 0.98293984}
+  m_LocalPosition: {x: -4.49, y: 5.53, z: -13.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.163, y: 12.614, z: 1.243}
 --- !u!1 &538920072
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,8 +3206,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294114047
-  m_fontColor: {r: 1, g: 0.98, b: 0.95, a: 1}
+    rgba: 4280756007
+  m_fontColor: {r: 0.15471691, g: 0.15471691, b: 0.15471691, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
