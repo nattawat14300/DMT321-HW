@@ -19,6 +19,8 @@ namespace DMT321.JsonDataTwin
     {
         private const float MinimumTemperatureC = 15f;
         private const float MaximumTemperatureC = 40f;
+        private const float MinimumHumidity = 0f;
+        private const float MaximumHumidity = 100f;
 
         [Header("Data quality rule")]
         [SerializeField, Min(0.1f)]
@@ -30,6 +32,7 @@ namespace DMT321.JsonDataTwin
         [SerializeField] private bool requiresFreshReading;
         [SerializeField] private string currentDeviceId = string.Empty;
         [SerializeField] private float temperatureC;
+        [SerializeField] private float humidity;
         [SerializeField] private float lastReceivedTime = -1f;
         [SerializeField, TextArea(2, 4)]
         private string lastValidJson = string.Empty;
@@ -63,6 +66,11 @@ namespace DMT321.JsonDataTwin
         public float TemperatureC
         {
             get { return temperatureC; }
+        }
+
+        public float Humidity
+        {
+            get { return humidity; }
         }
 
         public float LastReceivedTime
@@ -103,10 +111,11 @@ namespace DMT321.JsonDataTwin
             }
 
             if (!ContainsRequiredKey(rawJson, "deviceId") ||
-                !ContainsRequiredKey(rawJson, "temperatureC"))
+                !ContainsRequiredKey(rawJson, "temperatureC") ||
+                !ContainsRequiredKey(rawJson, "humidity"))
             {
                 return Reject(
-                    "JSON must contain deviceId and temperatureC exactly.");
+                    "JSON must contain deviceId, temperatureC, and humidity exactly.");
             }
 
             SensorPacket packet;
@@ -132,15 +141,25 @@ namespace DMT321.JsonDataTwin
 
             if (float.IsNaN(packet.temperatureC) ||
                 float.IsInfinity(packet.temperatureC) ||
-                packet.temperatureC < MinimumTemperatureC ||
-                packet.temperatureC > MaximumTemperatureC)
+                packet.humidity < MinimumHumidity ||
+                packet.humidity > MaximumHumidity)
             {
                 return Reject(
-                    "temperatureC must be between 15 and 40 degrees C.");
+                    "humidity must be between 15 and 40 °C");
+            }
+
+            if (float.IsNaN(packet.humidity) ||
+            float.IsInfinity(packet.humidity) ||
+            packet.humidity < MinimumHumidity ||
+            packet.humidity > MaximumHumidity)
+            {
+                return Reject(
+                    "humidity must be between 0 and 100 %RH.");
             }
 
             currentDeviceId = packet.deviceId.Trim();
             temperatureC = packet.temperatureC;
+            humidity = packet.humidity;
             lastReceivedTime = Time.unscaledTime;
             lastValidJson = rawJson;
             lastError = string.Empty;
@@ -149,7 +168,8 @@ namespace DMT321.JsonDataTwin
 
             Debug.Log(
                 "Telemetry accepted: " + currentDeviceId + " / " +
-                temperatureC.ToString("0.0") + " C",
+                temperatureC.ToString("0.0") + " C / " +
+                humidity.ToString("0.0") + " %RH",
                 this);
             return true;
         }
@@ -180,6 +200,7 @@ namespace DMT321.JsonDataTwin
             requiresFreshReading = false;
             currentDeviceId = string.Empty;
             temperatureC = 0f;
+            humidity = 0f;
             lastReceivedTime = -1f;
             lastValidJson = string.Empty;
             lastError = string.Empty;
@@ -230,5 +251,7 @@ namespace DMT321.JsonDataTwin
             Debug.LogWarning("Telemetry rejected: " + message, this);
             return false;
         }
+
+
     }
 }

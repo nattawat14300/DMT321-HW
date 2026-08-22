@@ -18,31 +18,42 @@ namespace DMT321.JsonDataTwin
         [SerializeField] private TMP_Text temperatureStatusText;
         [SerializeField] private TMP_Text dataStatusText;
         [SerializeField] private TMP_Text lastUpdatedText;
+        [SerializeField] private TMP_Text humidityText;
+        [SerializeField] private TMP_Text humidityStatusText;
 
         [Header("Show state in 3D")]
         [SerializeField] private Renderer temperatureIndicatorRenderer;
         [SerializeField] private Renderer dataStatusBeaconRenderer;
 
         [Header("Temperature rules")]
+        [SerializeField] private float humidityWarningAt = 70f;
         [SerializeField] private float coldBelowC = 20f;
         [SerializeField] private float warningAtC = 30f;
-        [SerializeField] private Color coldColor =
+        [SerializeField]
+        private Color coldColor =
             new Color(0.18f, 0.55f, 1f);
-        [SerializeField] private Color normalColor =
+        [SerializeField]
+        private Color normalColor =
             new Color(0.22f, 0.82f, 0.42f);
-        [SerializeField] private Color warningColor =
+        [SerializeField]
+        private Color warningColor =
             new Color(1f, 0.28f, 0.18f);
 
         [Header("Data-quality colors")]
-        [SerializeField] private Color waitingColor =
+        [SerializeField]
+        private Color waitingColor =
             new Color(0.72f, 0.9f, 1f);
-        [SerializeField] private Color liveColor =
+        [SerializeField]
+        private Color liveColor =
             new Color(0.22f, 0.82f, 0.42f);
-        [SerializeField] private Color staleColor =
+        [SerializeField]
+        private Color staleColor =
             new Color(1f, 0.72f, 0.12f);
-        [SerializeField] private Color offlineColor =
+        [SerializeField]
+        private Color offlineColor =
             new Color(0.48f, 0.46f, 0.55f);
-        [SerializeField] private Color lastKnownObjectColor =
+        [SerializeField]
+        private Color lastKnownObjectColor =
             new Color(0.76f, 0.7f, 0.86f);
 
         private MaterialPropertyBlock colorBlock;
@@ -84,33 +95,74 @@ namespace DMT321.JsonDataTwin
             }
 
             float value = receiver.TemperatureC;
+            float humidity = receiver.Humidity;
+
             bool isLive = dataStatus == TelemetryDataStatus.Live;
-            string condition = GetTemperatureCondition(value);
-            Color conditionColor = GetTemperatureColor(value);
+
+            string condition =
+                GetTemperatureCondition(value);
+
+            Color conditionColor =
+                GetTemperatureColor(value);
+
+            string humidityCondition =
+                GetHumidityCondition(humidity);
+
+            Color humidityColor =
+                GetHumidityColor(humidity);
 
             if (deviceIdText != null)
             {
-                deviceIdText.text = "DEVICE  " + receiver.CurrentDeviceId;
+                deviceIdText.text =
+                    "DEVICE  " + receiver.CurrentDeviceId;
             }
 
             if (temperatureText != null)
             {
-                temperatureText.text = value.ToString("0.0") + " °C";
+                temperatureText.text =
+                    value.ToString("0.0") + " °C";
             }
 
             if (temperatureStatusText != null)
             {
-                temperatureStatusText.text = "TEMPERATURE  " + condition +
+                temperatureStatusText.text =
+                    "TEMPERATURE  " +
+                    condition +
                     (isLive ? string.Empty : "  ·  LAST KNOWN");
-                temperatureStatusText.color = conditionColor;
+
+                temperatureStatusText.color =
+                    conditionColor;
             }
 
             if (lastUpdatedText != null)
             {
-                float age = receiver.GetDataAgeSeconds(nowSeconds);
+                float age =
+                    receiver.GetDataAgeSeconds(nowSeconds);
+
                 lastUpdatedText.text =
-                    "LAST UPDATED  " + age.ToString("0.0") + " s AGO" +
-                    (isLive ? string.Empty : "  ·  LAST KNOWN VALUE");
+                    "LAST UPDATED  " +
+                    age.ToString("0.0") +
+                    " s AGO" +
+                    (isLive
+                        ? string.Empty
+                        : "  ·  LAST KNOWN VALUE");
+            }
+
+            if (humidityText != null)
+            {
+                humidityText.text =
+                    humidity.ToString("0.0") + " %RH";
+            }
+
+            if (humidityStatusText != null)
+            {
+                humidityStatusText.text =
+                    "HUMIDITY  " +
+                    humidityCondition +
+                    (isLive ? string.Empty : "  ·  LAST KNOWN");
+
+                humidityStatusText.color =
+                    humidityColor;
             }
 
             SetRendererColor(
@@ -186,6 +238,18 @@ namespace DMT321.JsonDataTwin
             }
 
             return value >= warningAtC ? warningColor : normalColor;
+        }
+
+        private string GetHumidityCondition(float value)
+        {
+            return value >= humidityWarningAt ? "WARNING" : "NORMAL";
+        }
+
+        private Color GetHumidityColor(float value)
+        {
+            return value >= humidityWarningAt
+                ? warningColor
+                : normalColor;
         }
 
         private Color GetDataStatusColor(TelemetryDataStatus status)

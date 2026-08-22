@@ -11,5 +11,6 @@ namespace DMT321.JsonDataTwin
     {
         public string deviceId;
         public float temperatureC;
+        public float humidity;
     }
 }

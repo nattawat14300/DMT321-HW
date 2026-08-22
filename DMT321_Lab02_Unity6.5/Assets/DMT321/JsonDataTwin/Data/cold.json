@@ -1,4 +1,5 @@
 {
-  "deviceId": "GH-01",
-  "temperatureC": 18.0
+    "deviceId": "GH-01",
+    "temperatureC": 18.0,
+    "humidity": 50.0
 }
