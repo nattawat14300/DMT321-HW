@@ -477,6 +477,5 @@ namespace DMT321.JsonDataTwin
             lastHumidityReceivedTime =
                 Time.unscaledTime - staleAfterSeconds - 1f;
         }
-
     }
 }
