@@ -190,3 +190,4 @@ params: {}
 [2026-08-23T06:37:46.352Z][INFO] config:project:get-registries <-- Request received
 params: {}
 [2026-08-23T06:37:46.358Z][INFO] config:project:get-registries --> 200 (6 ms)
+[2026-08-23T06:39:57.129Z][INFO] Shutting down UnityPackageManager.exe: parent process [27908] is no longer running.
