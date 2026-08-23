@@ -21,6 +21,8 @@ namespace DMT321.JsonDataTwin
         private const float MaximumTemperatureC = 40f;
         private const float MinimumHumidity = 0f;
         private const float MaximumHumidity = 100f;
+        private bool temperatureEnabled = true;
+        private bool humidityEnabled = true;
 
         [Header("Data quality rule")]
         [SerializeField, Min(0.1f)]
@@ -37,6 +39,12 @@ namespace DMT321.JsonDataTwin
         [SerializeField, TextArea(2, 4)]
         private string lastValidJson = string.Empty;
         [SerializeField] private string lastError = string.Empty;
+
+        [SerializeField] private bool hasTemperatureReading;
+        [SerializeField] private bool hasHumidityReading;
+
+        [SerializeField] private float lastTemperatureReceivedTime = -1f;
+        [SerializeField] private float lastHumidityReceivedTime = -1f;
 
         public float StaleAfterSeconds
         {
@@ -98,81 +106,6 @@ namespace DMT321.JsonDataTwin
         /// Returns false when the connection, JSON, or value is invalid.
         /// Invalid input never overwrites the last valid reading.
         /// </summary>
-        public bool ReceiveJson(string rawJson)
-        {
-            if (!isConnected)
-            {
-                return Reject("Source is offline. Reconnect before sending.");
-            }
-
-            if (string.IsNullOrWhiteSpace(rawJson))
-            {
-                return Reject("JSON is empty.");
-            }
-
-            if (!ContainsRequiredKey(rawJson, "deviceId") ||
-                !ContainsRequiredKey(rawJson, "temperatureC") ||
-                !ContainsRequiredKey(rawJson, "humidity"))
-            {
-                return Reject(
-                    "JSON must contain deviceId, temperatureC, and humidity exactly.");
-            }
-
-            SensorPacket packet;
-
-            try
-            {
-                packet = JsonUtility.FromJson<SensorPacket>(rawJson);
-            }
-            catch (Exception exception)
-            {
-                return Reject("JSON syntax error: " + exception.Message);
-            }
-
-            if (packet == null)
-            {
-                return Reject("JSON could not be converted to SensorPacket.");
-            }
-
-            if (string.IsNullOrWhiteSpace(packet.deviceId))
-            {
-                return Reject("deviceId must not be empty.");
-            }
-
-            if (float.IsNaN(packet.temperatureC) ||
-                float.IsInfinity(packet.temperatureC) ||
-                packet.humidity < MinimumHumidity ||
-                packet.humidity > MaximumHumidity)
-            {
-                return Reject(
-                    "humidity must be between 15 and 40 °C");
-            }
-
-            if (float.IsNaN(packet.humidity) ||
-            float.IsInfinity(packet.humidity) ||
-            packet.humidity < MinimumHumidity ||
-            packet.humidity > MaximumHumidity)
-            {
-                return Reject(
-                    "humidity must be between 0 and 100 %RH.");
-            }
-
-            currentDeviceId = packet.deviceId.Trim();
-            temperatureC = packet.temperatureC;
-            humidity = packet.humidity;
-            lastReceivedTime = Time.unscaledTime;
-            lastValidJson = rawJson;
-            lastError = string.Empty;
-            hasReading = true;
-            requiresFreshReading = false;
-
-            Debug.Log(
-                "Telemetry accepted: " + currentDeviceId + " / " +
-                temperatureC.ToString("0.0") + " C / " +
-                humidity.ToString("0.0") + " %RH",
-                this);
-            return true;
-        }
 
         public void Disconnect()
         {
@@ -196,14 +129,29 @@ namespace DMT321.JsonDataTwin
         public void ResetForNewSession()
         {
             isConnected = true;
+
             hasReading = false;
+            hasTemperatureReading = false;
+            hasHumidityReading = false;
+
             requiresFreshReading = false;
-            currentDeviceId = string.Empty;
+
+            currentDeviceId =
+                string.Empty;
+
             temperatureC = 0f;
             humidity = 0f;
+
             lastReceivedTime = -1f;
-            lastValidJson = string.Empty;
-            lastError = string.Empty;
+
+            lastTemperatureReceivedTime = -1f;
+            lastHumidityReceivedTime = -1f;
+
+            lastValidJson =
+                string.Empty;
+
+            lastError =
+                string.Empty;
         }
 
         public TelemetryDataStatus GetDataStatus(float nowSeconds)
@@ -252,6 +200,283 @@ namespace DMT321.JsonDataTwin
             return false;
         }
 
+        public bool HasTemperatureReading
+        {
+            get { return hasTemperatureReading; }
+        }
+
+        public bool HasHumidityReading
+        {
+            get { return hasHumidityReading; }
+        }
+
+        public TelemetryDataStatus GetTemperatureStatus(float nowSeconds)
+        {
+            if (!isConnected)
+            {
+                return TelemetryDataStatus.Offline;
+            }
+
+            if (!hasTemperatureReading)
+            {
+                return TelemetryDataStatus.Waiting;
+            }
+
+            return GetTemperatureAgeSeconds(nowSeconds) < staleAfterSeconds
+                ? TelemetryDataStatus.Live
+                : TelemetryDataStatus.Stale;
+        }
+
+        public TelemetryDataStatus GetHumidityStatus(float nowSeconds)
+        {
+            if (!isConnected)
+            {
+                return TelemetryDataStatus.Offline;
+            }
+
+            if (!hasHumidityReading)
+            {
+                return TelemetryDataStatus.Waiting;
+            }
+
+            return GetHumidityAgeSeconds(nowSeconds) < staleAfterSeconds
+                ? TelemetryDataStatus.Live
+                : TelemetryDataStatus.Stale;
+        }
+
+        public float GetTemperatureAgeSeconds(float nowSeconds)
+        {
+            if (!hasTemperatureReading)
+            {
+                return 0f;
+            }
+
+            return Mathf.Max(
+                0f,
+                nowSeconds - lastTemperatureReceivedTime);
+        }
+
+        public float GetHumidityAgeSeconds(float nowSeconds)
+        {
+            if (!hasHumidityReading)
+            {
+                return 0f;
+            }
+
+            return Mathf.Max(
+                0f,
+                nowSeconds - lastHumidityReceivedTime);
+        }
+
+        public bool ReceiveJson(string rawJson)
+        {
+            if (!isConnected)
+            {
+                return Reject(
+                    "Source is offline. Reconnect before sending.");
+            }
+
+            if (string.IsNullOrWhiteSpace(rawJson))
+            {
+                return Reject("JSON is empty.");
+            }
+
+            if (!ContainsRequiredKey(rawJson, "deviceId"))
+            {
+                return Reject(
+                    "JSON must contain deviceId.");
+            }
+
+            SensorPacket packet;
+
+            try
+            {
+                packet =
+                    JsonUtility.FromJson<SensorPacket>(rawJson);
+            }
+            catch (Exception exception)
+            {
+                return Reject(
+                    "JSON syntax error: " +
+                    exception.Message);
+            }
+
+            if (packet == null)
+            {
+                return Reject(
+                    "JSON could not be converted to SensorPacket.");
+            }
+
+            if (string.IsNullOrWhiteSpace(packet.deviceId))
+            {
+                return Reject(
+                    "deviceId must not be empty.");
+            }
+
+            bool hasTemperature =
+                ContainsRequiredKey(
+                    rawJson,
+                    "temperatureC");
+
+            bool hasHumidity =
+                ContainsRequiredKey(
+                    rawJson,
+                    "humidity");
+
+            // ต้องมีอย่างน้อย 1 ค่า
+            if (!hasTemperature && !hasHumidity)
+            {
+                return Reject(
+                    "JSON must contain temperatureC or humidity.");
+            }
+
+            // ตรวจ Temperature เฉพาะเมื่อมี Temperature
+            if (hasTemperature)
+            {
+                if (float.IsNaN(packet.temperatureC) ||
+                    float.IsInfinity(packet.temperatureC) ||
+                    packet.temperatureC < MinimumTemperatureC ||
+                    packet.temperatureC > MaximumTemperatureC)
+                {
+                    return Reject(
+                        "temperatureC must be between 15 and 40 °C.");
+                }
+            }
+
+            // ตรวจ Humidity เฉพาะเมื่อมี Humidity
+            if (hasHumidity)
+            {
+                if (float.IsNaN(packet.humidity) ||
+                    float.IsInfinity(packet.humidity) ||
+                    packet.humidity < MinimumHumidity ||
+                    packet.humidity > MaximumHumidity)
+                {
+                    return Reject(
+                        "humidity must be between 0 and 100 %RH.");
+                }
+            }
+
+            // ----------------------------------------
+            // SAVE DEVICE ID
+            // ----------------------------------------
+
+            currentDeviceId =
+                packet.deviceId.Trim();
+
+            // ----------------------------------------
+            // SAVE TEMPERATURE
+            // ----------------------------------------
+
+            if (hasTemperature)
+            {
+                temperatureC =
+                    packet.temperatureC;
+
+                lastTemperatureReceivedTime =
+                    Time.unscaledTime;
+
+                hasTemperatureReading =
+                    true;
+            }
+
+            // ----------------------------------------
+            // SAVE HUMIDITY
+            // ----------------------------------------
+
+            if (hasHumidity)
+            {
+                humidity =
+                    packet.humidity;
+
+                lastHumidityReceivedTime =
+                    Time.unscaledTime;
+
+                hasHumidityReading =
+                    true;
+            }
+
+            // ----------------------------------------
+            // GENERAL STATE
+            // ----------------------------------------
+
+            lastReceivedTime =
+                Time.unscaledTime;
+
+            lastValidJson =
+                rawJson;
+
+            lastError =
+                string.Empty;
+
+            hasReading =
+                hasTemperatureReading ||
+                hasHumidityReading;
+
+            requiresFreshReading =
+                false;
+
+            Debug.Log(
+                "Telemetry accepted: " +
+                currentDeviceId +
+                " / TEMP: " +
+                (
+                    hasTemperature
+                        ? temperatureC.ToString("0.0") + " C"
+                        : "NO UPDATE"
+                ) +
+                " / HUMIDITY: " +
+                (
+                    hasHumidity
+                        ? humidity.ToString("0.0") + " %RH"
+                        : "NO UPDATE"
+                ),
+                this);
+
+            return true;
+        }
+
+        public void TestTemperatureOnly()
+        {
+            ReceiveJson(
+                "{\"deviceId\":\"GH-01\",\"temperatureC\":25.0}"
+            );
+        }
+
+        public void TestHumidityOnly()
+        {
+            ReceiveJson(
+                "{\"deviceId\":\"GH-01\",\"humidity\":65.0}"
+            );
+        }
+
+        public void TestBothValid()
+        {
+            ReceiveJson(
+                "{\"deviceId\":\"GH-01\",\"temperatureC\":25.0,\"humidity\":65.0}"
+            );
+        }
+
+        public void ToggleTemperature()
+        {
+            temperatureEnabled = !temperatureEnabled;
+        }
+
+        public void ToggleHumidity()
+        {
+            humidityEnabled = !humidityEnabled;
+        }
+
+        public void TemperatureOffline()
+        {
+            lastTemperatureReceivedTime =
+                Time.unscaledTime - staleAfterSeconds - 1f;
+        }
+
+        public void HumidityOffline()
+        {
+            lastHumidityReceivedTime =
+                Time.unscaledTime - staleAfterSeconds - 1f;
+        }
 
     }
 }
