@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/DMT321/CommandAckTwin/Scenes/L03_StartHere.unity
+    guid: a82e49fb4744845de9a29f362e62b2e6
+  - enabled: 1
+    path: Assets/DMT321/CommandAckTwin/Scenes/L03_CommandAckTwin.unity
+    guid: 48541b4527d084c8c99b80dad204dde3
+  m_configObjects: {}
