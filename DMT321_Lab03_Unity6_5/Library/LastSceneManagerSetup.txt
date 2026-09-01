@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/DMT321/CommandAckTwin/Scenes/L03_StartHere.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
