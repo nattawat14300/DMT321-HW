@@ -404,6 +404,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/DMT321/CommandAckTwin/Scripts/AutomaticFanController.cs"
 "Assets/DMT321/CommandAckTwin/Scripts/FanAckPacket.cs"
 "Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs"
 "Assets/DMT321/CommandAckTwin/Scripts/FanCommandPacket.cs"

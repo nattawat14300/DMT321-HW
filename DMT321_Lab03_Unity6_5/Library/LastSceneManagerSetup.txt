@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/DMT321/CommandAckTwin/Scenes/L03_1044.unity
+- path: Assets/DMT321/CommandAckTwin/Scenes/Assignment3_1044.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
