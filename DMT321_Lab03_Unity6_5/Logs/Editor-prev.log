@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.5/staging' branch; Version is '6000.5.2f1 (eb73d3b415a1) revision 15430611'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Asus" at "2026-09-06T03:03:01.3219958Z"
 OS: 'Windows 11  (10.0.26200) CoreSingleLanguage' Language: 'en' Physical Memory: 16106 MB
 BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-09-06T03:03:01Z
+Date: 2026-09-06T09:58:17Z
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Asus" at "2026-09-06T09:58:17.5662317Z"
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.5.2f1\Editor\Unity.exe
@@ -21,7 +21,7 @@ LicenseClient-Asus
 -hubSessionId
 7359d97a-9002-4814-adae-9ccc0e83709a
 -accessToken
-9gO4ifFfXEHOZLjB_YPUrX_moL4mGfkQt1QbEtNgvQ8011f
+GoznzbnsLJEUZ6vB8uW9RD_0mvE52ieYXAo6nUkjLOA011f
 Successfully changed project path to: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5
 C:/Users/Asus/Desktop/DMT321-HW/DMT321_Lab03_Unity6_5
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -60,18 +60,18 @@ C:/Users/Asus/Desktop/DMT321-HW/DMT321_Lab03_Unity6_5
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [16376]  Target information:
+Player connection [26656]  Target information:
 
-Player connection [16376]  * "[IP] 192.168.1.105 [Port] 55504 [Flags] 2 [Guid] 2036663902 [EditorId] 2036663902 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-304ELUFL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [26656]  * "[IP] 192.168.1.105 [Port] 55504 [Flags] 2 [Guid] 2583834638 [EditorId] 2583834638 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-304ELUFL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16376]  * "[IP] 26.209.92.76 [Port] 55504 [Flags] 2 [Guid] 2036663902 [EditorId] 2036663902 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-304ELUFL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [26656]  * "[IP] 26.209.92.76 [Port] 55504 [Flags] 2 [Guid] 2583834638 [EditorId] 2583834638 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-304ELUFL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16376] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [16376] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [26656] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26656] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-8588" after 0.5 seconds.
+[Package Manager] Connected to IPC stream "Upm-29688" after 1.3 seconds.
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
@@ -79,29 +79,29 @@ Input System module state changed to: Initialized.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Asus"
 [Licensing::IpcConnector] LicenseClient-Asus channel disconnected successfully.
 [Licensing::IpcConnector] Channel LicenseClient-Asus-6000.5.2 doesn't exist
-[Licensing::Module] Successfully launched the LicensingClient (PId: 23940)
+[Licensing::Module] Successfully launched the LicensingClient (PId: 20760)
 Starting IPC server.
 Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-Asus-6000.5.2, press Ctrl-C to exit.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Asus-6000.5.2" at "2026-09-06T03:03:12.9644579Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 23940, path: "C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Asus-6000.5.2" at "2026-09-06T09:58:26.20975Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 20760, path: "C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              8502fab4500d4fe69a64dd5b96b31ca1
-  Correlation Id:          d85dbd816fd3b678a7a063706cadac14
-  External correlation Id: 2815133147768919799
+  Session Id:              539ad83eafe645d49b006d7bde7ae2fb
+  Correlation Id:          938a2c35fc6f9d891366f452c642ae65
+  External correlation Id: 5794885412903222690
   Machine Id:              lKdBEv9B6sk68+5oeNpT9LNO8Ok=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Asus-6000.5.2" (connect: 6.56s, validation: 0.67s, handshake: 0.07s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Asus-6000.5.2-notifications" at "2026-09-06T03:03:13.7051649Z"
-[Licensing::Module] Connected to LicensingClient (PId: 23940, launch time: 0.07, total connection time: 7.30s)
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Asus-6000.5.2" (connect: 1.94s, validation: 0.19s, handshake: 0.06s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Asus-6000.5.2-notifications" at "2026-09-06T09:58:26.4611348Z"
+[Licensing::Module] Connected to LicensingClient (PId: 20760, launch time: 0.12, total connection time: 2.19s)
 [Licensing::Client] Successfully updated the access token
-[Licensing::Module] Successfully updated the access token 9gO4ifFfXE...
+[Licensing::Module] Successfully updated the access token GoznzbnsLJ...
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: F4-V2HH-7T9E-WBHF-A6SK-XXXX
   Product: Unity Personal
   Type: ULF
-  Expiration: 2026-10-12T03:01:18Z
+  Expiration: 2026-10-13T04:04:10Z
 [Licensing::Module] License group:
   Id: 18968317507188-UnityPersXXXX
   Product: Unity Personal
@@ -113,20 +113,20 @@ Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-Asus-6000.5.2, pr
   Id: F4-V2HH-7T9E-WBHF-A6SK-XXXX
   Product: Unity Personal
   Type: ULF
-  Expiration: 2026-10-12T03:01:18Z
+  Expiration: 2026-10-13T04:04:10Z
 [Licensing::Module] License group:
   Id: 18968317507188-UnityPersXXXX
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-[Licensing::Module] Licensing Background thread has ended after 12.45s
-[Licensing::Module] Licensing is initialized (took 9.89s).
+[Licensing::Module] Licensing Background thread has ended after 9.03s
+[Licensing::Module] Licensing is initialized (took 5.26s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: F4-V2HH-7T9E-WBHF-A6SK-XXXX
   Product: Unity Personal
   Type: ULF
-  Expiration: 2026-10-12T03:01:18Z
+  Expiration: 2026-10-13T04:04:10Z
 [Licensing::Module] License group:
   Id: 18968317507188-UnityPersXXXX
   Product: Unity Personal
@@ -164,16 +164,525 @@ Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Managed
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56688
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.685192 seconds.
+Registered in 0.140929 seconds.
 Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.621 seconds
+Domain Reload Profiling: 9092ms
+	BeginReloadAssembly (924ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (174ms)
+	initialDomainReloadingComplete (784ms)
+	LoadAllAssembliesAndSetupDomain (3500ms)
+		LoadAssemblies (885ms)
+		AnalyzeDomain (2572ms)
+			TypeCache.Refresh (2566ms)
+				TypeCache.ScanAssembly (2380ms)
+			BuildScriptInfoCaches (3ms)
+	FinalizeReload (3688ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			BeforeProcessingInitializeOnLoad (556ms)
+			ProcessInitializeOnLoadAttributes (1023ms)
+			ProcessInitializeOnLoadMethodAttributes (1496ms)
+			EditorAssembliesLoaded (26ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-V2HH-7T9E-WBHF-A6SK-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: 2026-10-13T10:58:29Z
+[Licensing::Module] License group:
+  Id: 18968317507188-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 9 packages:
+  Built-in packages:
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.ugui@2.5.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.ugui@3d1ea40b73ef)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\Library\PackageCache\com.unity.modules.physicscore2d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:80
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 597.1419ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.2f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/Asus/Desktop/DMT321-HW/DMT321_Lab03_Unity6_5
+ExitCode: 0 Duration: 0s870ms
+*** Tundra build success (0.19 seconds), 0 items updated, 213 evaluated
+AssetDatabase: script compilation time: 9.729736s
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.457 seconds
+Domain Reload Profiling: 2818ms
+	BeginReloadAssembly (771ms)
+		DisableScriptedObjects (67ms)
+		CreateAndSetChildDomain (253ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (47ms)
+	initialDomainReloadingComplete (123ms)
+	LoadAllAssembliesAndSetupDomain (381ms)
+		LoadAssemblies (325ms)
+		AnalyzeDomain (105ms)
+			TypeCache.Refresh (81ms)
+				TypeCache.ScanAssembly (12ms)
+			BuildScriptInfoCaches (15ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1463ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (274ms)
+			ProcessInitializeOnLoadAttributes (264ms)
+			ProcessInitializeOnLoadMethodAttributes (239ms)
+			AfterProcessingInitializeOnLoad (17ms)
+		AwakeInstancesAfterBackupRestoration (68ms)
 Starting new worker id: 0 with log in C:/Users/Asus/Desktop/DMT321-HW/DMT321_Lab03_Unity6_5/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=58360b9c087856344a1f3e7e3e825db5): Total: 18.403 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3412 ms
+		Asset DB Callback time: managed=57 ms, native=3714 ms
+		Scripting: domain reloads=1, domain reload time=1453 ms, compile time=9737 ms, other=28 ms
+		Project Asset Count: scripts=145, non-scripts=112
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 3686.701ms
+	ApplyChangesToAssetFolders: 25.181ms
+	Scan: 582.253ms
+	Collect global state as custom dependencies: 4.167ms
+	CategorizeScriptCompilationAssets: 3.621ms
+	ProcessAssetsWithTransientArtifactChanges: 31.279ms
+	CategorizeAssets: 13.152ms
+	CompileScripts: 9736.987ms
+	ImportOutOfDateAssets: 1503.074ms (1473.149ms without children)
+		UnloadImportedAssets: 0.666ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.241ms
+		ImportSchedulerStart: 29.012ms
+	PostProcessAllAssets: 57.592ms
+		MonoPostProcessAllAssets: 57.148ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 23.523ms
+			SyncVS.PostprocessSyncProject 4.561ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.701ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 1.152ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.401ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.380ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.190ms
+	UnloadStreamsBegin: 5.430ms
+	GenerateScriptTypeHashes: 2.038ms
+	GenerateScriptTypeSerializationHashes: 5.256ms
+	Untracked: 2708.891ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Scanning for USB devices : 4.649ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-DMT321 JSON Data Twin
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/DMT321/CommandAckTwin/Scenes/Assignment3_1044.unity'
+	Deserialize:            227.013 ms
+	Integration:            337.793 ms
+	Integration of assets:  14.465 ms
+	Thread Wait Time:       0.105 ms
+	Total Operation Time:   579.375 ms
+Unloading 383 unused Assets / (0.6 MB). Loaded Objects now: 1416.
+Memory consumption went from 210.3 MB to 209.7 MB.
+Total: 21.764000 ms (FindLiveObjects: 0.538600 ms CreateObjectMapping: 0.223000 ms MarkObjects: 19.312800 ms  DeleteObjects: 1.430300 ms)
+
+[LAYOUT] About to load UserSettings\Layouts\default-6000.dwlt, keepMainWindow=False
+[LAYOUT] About to save layout C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/Asus/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+[MODES] ModeService[default].InitializeCurrentMode
+[MODES] ModeService[default].RaiseModeChanged(default, default)
+This project uses Input Manager, which is marked for deprecation. To manage input in your project, use the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest">Input System package</a> instead.
+<RI> Initializing input.
+<RI> Input initialized.
+[Project] Loading completed in 65.252 seconds
+	Project init time: 				60.353 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		6.589 seconds
+		Asset Database init time: 		1.291 seconds
+		Global illumination init time: 	0.021 seconds
+		Assemblies load time: 			10.139 seconds
+		Unity extensions init time: 	0.008 seconds
+		Asset Database refresh time: 	19.433 seconds
+	Scene opening time: 			4.282 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1788688762623,"processId":29688,"projectLoad":65.2523617,"projectInit":60.3531249,"templateInit":0.0,"packageManagerInit":6.5889273,"assetDatabaseInit":1.2909581,"globalIlluminationInit":0.0209127,"assembliesLoad":10.1390186,"unityExtensionsInit":0.0083806,"assetDatabaseRefresh":19.4326548,"sceneOpening":4.2820595}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1788688762624,"processId":29688,"editorVersion":"6000.5.2f1 (eb73d3b415a1)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+Worker ready: AssetImportWorkerHW0 0
+Asset Pipeline Refresh (id=d48ba1400de3ef04e89bda2ccf2a79a4): Total: 0.080 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-V2HH-7T9E-WBHF-A6SK-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: 2026-10-13T10:58:29Z
+[Licensing::Module] License group:
+  Id: 18968317507188-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-V2HH-7T9E-WBHF-A6SK-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: 2026-10-13T10:58:29Z
+[Licensing::Module] License group:
+  Id: 18968317507188-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Dynamic Batching is deprecated and will be removed in a future release. Use GPU Instancing instead. Disable Dynamic Batching in Project Settings > Player > Other Settings to remove this warning.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+UnityEditor.PlayerSettingsBatchingWarning:WarnIfDynamicBatchingEnabled ()
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+Created GICache directory at C:/Users/Asus/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.066s, timestamps: [70.097 - 70.163]
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated access token: "Goznzbns"... (expires: 2026-09-06T11:00:01Z)
+Starting new worker id: 1 with log in C:/Users/Asus/Desktop/DMT321-HW/DMT321_Lab03_Unity6_5/Logs/AssetImportWorkerHW1.log
+[Worker0] Imported GUID: 0632d86ccfd97474eb69c880ffd000fd - Path: Assets/DMT321/JsonDataTwin/Data/normal.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '351294ae4578eeeee02f9964ea42f847') in 0.1945495 seconds
+[Worker0] Imported GUID: 29ec003c5160d6d49a3b1729ea529d14 - Path: Assets/DMT321/CommandAckTwin/Scenes/Assignment3_1044.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e3e6fce6b3403dddc2a69fd2028b2538') in 0.039098 seconds
+[Worker0] Imported GUID: 1b97e7869e468784c921db3238fb70b6 - Path: Assets/DMT321/CommandAckTwin/Scripts/AutomaticFanController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9f8213e60905e45a550fd88624cfb98a') in 0.0656222 seconds
+Worker ready: AssetImportWorkerHW1 1
+Asset Pipeline Refresh (id=d98687dbd2bb2a1489c81a882bcbe587): Total: 0.018 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+TrimDiskCacheJob: Current cache size 0mb
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-V2HH-7T9E-WBHF-A6SK-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: 2026-10-13T10:58:29Z
+[Licensing::Module] License group:
+  Id: 18968317507188-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.241 seconds
+Domain Reload Profiling: 4998ms
+	BeginReloadAssembly (1237ms)
+		DisableScriptedObjects (312ms)
+		CreateAndSetChildDomain (399ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (53ms)
+	initialDomainReloadingComplete (123ms)
+	LoadAllAssembliesAndSetupDomain (307ms)
+		LoadAssemblies (303ms)
+		AnalyzeDomain (65ms)
+			TypeCache.Refresh (56ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (3243ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			BeforeProcessingInitializeOnLoad (238ms)
+			ProcessInitializeOnLoadAttributes (167ms)
+			ProcessInitializeOnLoadMethodAttributes (165ms)
+			AfterProcessingInitializeOnLoad (13ms)
+		AwakeInstancesAfterBackupRestoration (1681ms)
+
+Asset Pipeline Refresh (id=90a054a65112a42499fadc2e7a487109): Total: 5.533 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3399 ms
+		Asset DB Callback time: managed=113 ms, native=53 ms
+		Scripting: domain reloads=1, domain reload time=1959 ms, compile time=7 ms, other=0 ms
+		Project Asset Count: scripts=145, non-scripts=112
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 4.356ms
+	ApplyChangesToAssetFolders: 0.200ms
+	Collect global state as custom dependencies: 0.239ms
+	ProcessAssetsWithTransientArtifactChanges: 35.012ms
+	CategorizeAssets: 5.174ms
+	CompileScripts: 7.457ms
+	ImportOutOfDateAssets: 3264.624ms (3253.704ms without children)
+		CollectScriptTypesHashes: 0.772ms
+		ReloadNativeAssets: 0.818ms
+		UnloadImportedAssets: 7.371ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.201ms
+		ImportSchedulerStart: 2.518ms
+	PostProcessAllAssets: 140.817ms
+		PostProcessCallbackCreateDeferredMaterials 7.224ms
+		PostprocessAssetsUpdateCachedIcon 1.690ms
+		ShaderAssetModifiedCallback 0.819ms
+		RaytracingShaderImportPostprocess 0.784ms
+		SpeedTreeImporter.PostprocessAllAssets 0.583ms
+		ComputeShaderImportPostprocess 0.558ms
+		AssemblyValidation.PostprocessAllAssets 0.373ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 0.293ms
+		BlockShaderImporter.PostprocessAllAssets 0.283ms
+		MonoPostProcessAllAssets: 107.884ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 21.422ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 18.560ms
+			AssetPostprocessor.OnPostprocessAllAssets 12.501ms
+			AssetChangedListener.OnPostprocessAllAssets 8.081ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 3.589ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 3.455ms
+			SyncVS.PostprocessSyncProject 3.217ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.534ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.442ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.922ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.716ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.696ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.592ms
+			AssetEvents.OnPostprocessAllAssets 0.452ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.409ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.367ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.306ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.286ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.283ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.233ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.189ms
+	PostAssetChangesProfiler: 24.979ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.052ms
+	UnloadStreamsBegin: 6.118ms
+	GenerateScriptTypeHashes: 2.620ms
+	GenerateScriptTypeSerializationHashes: 6.088ms
+	Untracked: 2035.314ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            12.459 ms
+	Integration:            99.326 ms
+	Integration of assets:  0.015 ms
+	Thread Wait Time:       0.005 ms
+	Total Operation Time:   111.805 ms
+[Licensing::Client] Successfully resolved entitlement details
+Command sent: {"deviceId":"GH-01","commandId":"CMD-001","fanOn":true}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.FanCommandController:SendFanCommandAt (bool,single) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:234)
+DMT321.CommandAckTwin.FanCommandController:SendFanCommand (bool) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:172)
+DMT321.CommandAckTwin.FanCommandController:SendFanOn () (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:159)
+UnityEngine.Events.InvokableCall:Invoke ()
+UnityEngine.Events.UnityEvent:Invoke ()
+UnityEngine.UI.Button:Press () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/UI/Core/Button.cs:71)
+UnityEngine.UI.Button:OnPointerClick (UnityEngine.EventSystems.PointerEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/UI/Core/Button.cs:115)
+UnityEngine.EventSystems.ExecuteEvents:Execute (UnityEngine.EventSystems.IPointerClickHandler,UnityEngine.EventSystems.BaseEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/ExecuteEvents.cs:57)
+UnityEngine.EventSystems.ExecuteEvents:Execute<UnityEngine.EventSystems.IPointerClickHandler> (UnityEngine.GameObject,UnityEngine.EventSystems.BaseEventData,UnityEngine.EventSystems.ExecuteEvents/EventFunction`1<UnityEngine.EventSystems.IPointerClickHandler>) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/ExecuteEvents.cs:272)
+UnityEngine.EventSystems.StandaloneInputModule:ReleaseMouse (UnityEngine.EventSystems.PointerEventData,UnityEngine.GameObject) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:216)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress (UnityEngine.EventSystems.PointerInputModule/MouseButtonEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:678)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent (int) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:578)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:558)
+UnityEngine.EventSystems.StandaloneInputModule:Process () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:306)
+UnityEngine.EventSystems.EventSystem:Update () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/EventSystem.cs:516)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs Line: 234)
+
+ACK accepted: {"deviceId":"GH-01","commandId":"CMD-001","accepted":true,"reportedFanOn":true,"message":"Fan state applied."}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.FanCommandController:ReceiveAckJson (string) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:327)
+DMT321.CommandAckTwin.MockFanDevice:ProcessPendingAt (single) (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:244)
+DMT321.CommandAckTwin.MockFanDevice:Update () (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:133)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs Line: 327)
+
+Mock ACK sent: {"deviceId":"GH-01","commandId":"CMD-001","accepted":true,"reportedFanOn":true,"message":"Fan state applied."}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.MockFanDevice:ProcessPendingAt (single) (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:245)
+DMT321.CommandAckTwin.MockFanDevice:Update () (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:133)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs Line: 245)
+
+Command sent: {"deviceId":"GH-01","commandId":"CMD-002","fanOn":true}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.FanCommandController:SendFanCommandAt (bool,single) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:234)
+DMT321.CommandAckTwin.FanCommandController:SendFanCommand (bool) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:172)
+DMT321.CommandAckTwin.FanCommandController:SendFanOn () (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:159)
+UnityEngine.Events.InvokableCall:Invoke ()
+UnityEngine.Events.UnityEvent:Invoke ()
+UnityEngine.UI.Button:Press () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/UI/Core/Button.cs:71)
+UnityEngine.UI.Button:OnPointerClick (UnityEngine.EventSystems.PointerEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/UI/Core/Button.cs:115)
+UnityEngine.EventSystems.ExecuteEvents:Execute (UnityEngine.EventSystems.IPointerClickHandler,UnityEngine.EventSystems.BaseEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/ExecuteEvents.cs:57)
+UnityEngine.EventSystems.ExecuteEvents:Execute<UnityEngine.EventSystems.IPointerClickHandler> (UnityEngine.GameObject,UnityEngine.EventSystems.BaseEventData,UnityEngine.EventSystems.ExecuteEvents/EventFunction`1<UnityEngine.EventSystems.IPointerClickHandler>) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/ExecuteEvents.cs:272)
+UnityEngine.EventSystems.StandaloneInputModule:ReleaseMouse (UnityEngine.EventSystems.PointerEventData,UnityEngine.GameObject) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:216)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress (UnityEngine.EventSystems.PointerInputModule/MouseButtonEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:678)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent (int) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:578)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:558)
+UnityEngine.EventSystems.StandaloneInputModule:Process () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:306)
+UnityEngine.EventSystems.EventSystem:Update () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/EventSystem.cs:516)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs Line: 234)
+
+ACK accepted: {"deviceId":"GH-01","commandId":"CMD-002","accepted":true,"reportedFanOn":true,"message":"Fan state applied."}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.FanCommandController:ReceiveAckJson (string) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:327)
+DMT321.CommandAckTwin.MockFanDevice:ProcessPendingAt (single) (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:244)
+DMT321.CommandAckTwin.MockFanDevice:Update () (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:133)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs Line: 327)
+
+Mock ACK sent: {"deviceId":"GH-01","commandId":"CMD-002","accepted":true,"reportedFanOn":true,"message":"Fan state applied."}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.MockFanDevice:ProcessPendingAt (single) (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:245)
+DMT321.CommandAckTwin.MockFanDevice:Update () (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:133)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs Line: 245)
+
+Asset Pipeline Refresh (id=cc7785c36af677e4e9adcaebba85ba4e): Total: 0.009 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=a5a078b6f084961488b9a39e4bde05fd): Total: 0.005 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Command sent: {"deviceId":"GH-01","commandId":"CMD-001","fanOn":true}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.FanCommandController:SendFanCommandAt (bool,single) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:234)
+DMT321.CommandAckTwin.FanCommandController:SendFanCommand (bool) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:172)
+DMT321.CommandAckTwin.FanCommandController:SendFanOn () (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:159)
+UnityEngine.Events.InvokableCall:Invoke ()
+UnityEngine.Events.UnityEvent:Invoke ()
+UnityEngine.UI.Button:Press () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/UI/Core/Button.cs:71)
+UnityEngine.UI.Button:OnPointerClick (UnityEngine.EventSystems.PointerEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/UI/Core/Button.cs:115)
+UnityEngine.EventSystems.ExecuteEvents:Execute (UnityEngine.EventSystems.IPointerClickHandler,UnityEngine.EventSystems.BaseEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/ExecuteEvents.cs:57)
+UnityEngine.EventSystems.ExecuteEvents:Execute<UnityEngine.EventSystems.IPointerClickHandler> (UnityEngine.GameObject,UnityEngine.EventSystems.BaseEventData,UnityEngine.EventSystems.ExecuteEvents/EventFunction`1<UnityEngine.EventSystems.IPointerClickHandler>) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/ExecuteEvents.cs:272)
+UnityEngine.EventSystems.StandaloneInputModule:ReleaseMouse (UnityEngine.EventSystems.PointerEventData,UnityEngine.GameObject) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:216)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress (UnityEngine.EventSystems.PointerInputModule/MouseButtonEventData) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:678)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent (int) (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:578)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:558)
+UnityEngine.EventSystems.StandaloneInputModule:Process () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:306)
+UnityEngine.EventSystems.EventSystem:Update () (at ./Library/PackageCache/com.unity.ugui@3d1ea40b73ef/Runtime/UGUI/EventSystem/EventSystem.cs:516)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs Line: 234)
+
+ACK accepted: {"deviceId":"GH-01","commandId":"CMD-001","accepted":true,"reportedFanOn":true,"message":"Fan state applied."}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.FanCommandController:ReceiveAckJson (string) (at Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs:327)
+DMT321.CommandAckTwin.MockFanDevice:ProcessPendingAt (single) (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:244)
+DMT321.CommandAckTwin.MockFanDevice:Update () (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:133)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/FanCommandController.cs Line: 327)
+
+Mock ACK sent: {"deviceId":"GH-01","commandId":"CMD-001","accepted":true,"reportedFanOn":true,"message":"Fan state applied."}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+DMT321.CommandAckTwin.MockFanDevice:ProcessPendingAt (single) (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:245)
+DMT321.CommandAckTwin.MockFanDevice:Update () (at Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs:133)
+
+(Filename: Assets/DMT321/CommandAckTwin/Scripts/MockFanDevice.cs Line: 245)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            9.827 ms
+	Integration:            47.879 ms
+	Integration of assets:  0.015 ms
+	Thread Wait Time:       0.001 ms
+	Total Operation Time:   57.722 ms
+Unloading 300 unused Assets / (47.2 MB). Loaded Objects now: 2647.
+Memory consumption went from 442.7 MB to 395.4 MB.
+Total: 52.380900 ms (FindLiveObjects: 0.487300 ms CreateObjectMapping: 0.254500 ms MarkObjects: 31.470500 ms  DeleteObjects: 20.158100 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-V2HH-7T9E-WBHF-A6SK-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: 2026-10-13T10:58:29Z
+[Licensing::Module] License group:
+  Id: 18968317507188-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Asset Pipeline Refresh (id=972c562c4605d7345b17d71a68d7519a): Total: 0.057 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+MonoPathRemapper: Attempts to remap: 3576; Successful remaps: 856
+Serialized file version minimum: 23, current 23
+[LAYOUT] About to save layout C:\Users\Asus\Desktop\DMT321-HW\DMT321_Lab03_Unity6_5\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/Asus/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 Input System module state changed to: ShutdownInProgress.
@@ -181,9 +690,12 @@ Input Polling Thread exited.
 Input System module state changed to: Shutdown.
 [Licensing::IpcConnector] LicenseClient-Asus-6000.5.2-notifications channel disconnected successfully.
 [Licensing::IpcConnector] LicenseClient-Asus-6000.5.2 channel disconnected successfully.
-AcceleratorClientConnectionCallback - disconnected - :0
 Shut down.
+AcceleratorClientConnectionCallback - disconnected - :0
 Cleanup mono
 CodeReloadManager destroyed
-debugger-agent: Unable to listen on 4856
-Exiting without the bug reporter. Application will terminate with return code 0
+debugger-agent: Unable to listen on 4800
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1788691394357,"processId":29688,"allocatedMemory":47458804,"memoryLabels":[{"Default":175020},{"Permanent":15516},{"NewDelete":68765},{"Thread":4206456},{"Manager":32616},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":840687},{"Material":24},{"GfxDevice":62072},{"GfxThread":3840},{"Animation":952},{"Audio":1544},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":305584},{"Input":42840},{"JobScheduler":256},{"TextLib":57307},{"Mono":48},{"ScriptingNativeRuntime":707732},{"BaseObject":1709754},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":4009},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":9834},{"StaticString":3808},{"Utility":2673492},{"Curl":48},{"PoolAlloc":2168},{"AI":80},{"TypeTree":8869},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7240},{"WebRequest":4757},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":33066720},{"Camera":34521},{"Secure":265},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":1075336},{"CoreStats":13688},{"Identifiers":6768},{"Gui":1071646},{"EditorUtility":255789},{"VersionControl":8},{"Undo":931},{"AssetDatabase":495330},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35405},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":210},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3478},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

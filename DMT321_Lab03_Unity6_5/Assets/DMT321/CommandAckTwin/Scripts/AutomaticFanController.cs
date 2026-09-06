@@ -11,15 +11,7 @@ namespace DMT321.CommandAckTwin
         Hot
     }
 
-    /// <summary>
-    /// Automatically controls the fan using the latest LIVE
-    /// temperature received by TelemetryReceiver.
-    ///
-    /// Rule:
-    /// >= 30 C              -> FAN ON
-    /// > 26 C and < 30 C    -> HOLD
-    /// <= 26 C              -> FAN OFF
-    /// </summary>
+   
     public class AutomaticFanController : MonoBehaviour
     {
         [Header("Read sensor data from")]
@@ -227,10 +219,10 @@ namespace DMT321.CommandAckTwin
                 return;
             }
 
-            // ==================================================
+            
             // HOLD
             // 26 < Temperature < 30
-            // ==================================================
+            
 
             if (temperatureC > turnFanOffAtC &&
                 temperatureC < turnFanOnAtC)
